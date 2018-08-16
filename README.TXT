@@ -28,7 +28,8 @@ NOTE: This should set up all initial conditions for GIT and avoid a lot of confu
 
 4) Open the greenfoot project file from within greenfoot and start editing.
 
-5) Once tested and saved in Greenfoot, from the bash shell add any files that you want to put into the repository to the next git commit: (Note: File names are case sensitive!)
+5) Once tested and saved in Greenfoot, from the bash shell add any files that you want to put into the repository to the next git commit: (Note: File names are case sensitive!) NOTE: As a class we will discuss how we want to manage the class version (Fork or branch)
+before we start making commits.
 
 PLEASE DO NOT COMMIT YOUR FILES IF THEY DO NOT COMPILE LOCALLY!!!!!
 =====================================================================
