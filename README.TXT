@@ -47,3 +47,17 @@ git commit -m “adding my files to the repository”
 
 8) Push your changes to the remote repository:
 
+PUSHING INSTRUCTIONS:
+
+1) Create a new branch for your changes. Replace [name] with your last name
+
+	git checkout -b [name]
+
+2) Add and commit all your changes
+
+	git add -A
+	git commit -m "[name] commit"
+
+3) Push your changes to your new branch, enter login credentials if prompted
+
+	git push
