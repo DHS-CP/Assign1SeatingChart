@@ -53,11 +53,13 @@ PUSHING INSTRUCTIONS:
 
 	git checkout -b [name]
 
-2) Add and commit all your changes
+2) Add and commit all changes
 
 	git add -A
 	git commit -m "[name] commit"
 
 3) Push your changes to your new branch, enter login credentials if prompted
 
-	git push
+	git push --set-upstream origin [name]
+
+4) Your changes are now published on a new branch. Wait for them to be merged by the build master.
