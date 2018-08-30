@@ -47,7 +47,7 @@ git commit -m “adding my files to the repository”
 
 8) Push your changes to the remote repository:
 
-PUSHING INSTRUCTIONS:
+PERIOD 3 PUBLISHING INSTRUCTIONS:
 
 1) Create a new branch for your changes. Replace [name] with your last name
 
