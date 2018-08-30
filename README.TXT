@@ -62,4 +62,6 @@ PUSHING INSTRUCTIONS:
 
 	git push --set-upstream origin [name]
 
-4) Your changes are now published on a new branch. Wait for them to be merged by the build master.
+4) Your changes are now published on a new branch. Open the repository on GitHub.com, and click the branch: master button. Select your branch name in the dropdown. After this, click the New Pull Request button immediately to its right. On the new page, click new Pull Request, and it will be merged by the Build Master.
+
+	Video demoing this process: https://my.mixtape.moe/kujlwv.webm
