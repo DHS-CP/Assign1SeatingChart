@@ -47,3 +47,21 @@ git commit -m “adding my files to the repository”
 
 8) Push your changes to the remote repository:
 
+PERIOD 3 PUBLISHING INSTRUCTIONS:
+
+1) Create a new branch for your changes. Replace [name] with your last name
+
+	git checkout -b [name]
+
+2) Add and commit all changes
+
+	git add -A
+	git commit -m "[name] commit"
+
+3) Push your changes to your new branch, enter login credentials if prompted
+
+	git push --set-upstream origin [name]
+
+4) Your changes are now published on a new branch. Open the repository on GitHub.com, and click the branch: master button. Select your branch name in the dropdown. After this, click the New Pull Request button immediately to its right. On the new page, click new Pull Request, and it will be merged by the Build Master.
+
+	Video demoing this process: https://my.mixtape.moe/kujlwv.webm
