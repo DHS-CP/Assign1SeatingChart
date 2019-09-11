@@ -31,6 +31,7 @@ public class DonnaPrince extends Student implements SpecialInterestOrHobby
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
         sitting=true;
+        numStudents++;
     }
     /**
      * Default constructor, if you don't pass in a name and seating location
@@ -149,8 +150,8 @@ public class DonnaPrince extends Student implements SpecialInterestOrHobby
                 
                 
                 if (q.contains("How many students are in the class?")){
-                   int number= getWorld().numberOfObjects();
-                   q=Greenfoot.ask("There are "+number+" students in the class ...May I sit down?");
+                   //int number= getWorld().numberOfObjects();
+                   q=Greenfoot.ask("There are "+numStudents+" students in the class ...May I sit down?");
                    if (q.contains("yes")||q.contains("YES")||q.contains("Yes")){
                       check = false;
                       sitDown();
