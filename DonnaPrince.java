@@ -38,13 +38,13 @@ public class DonnaPrince extends Student implements SpecialInterestOrHobby
      * of the classroom.
      */
     public DonnaPrince() {
-        firstName="Kilgore";
-        lastName="Trout";
-        myRow=1;
-        mySeat=1;
+        firstName = "Donna";
+        lastName = "Prince";
+        myRow = 3;
+        mySeat = 5;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
+        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
         setImage(portraitFile);
         sitting=true;
@@ -65,7 +65,7 @@ public class DonnaPrince extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to time travel!");
+                myHobby("I like to garden!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
@@ -93,52 +93,113 @@ public class DonnaPrince extends Student implements SpecialInterestOrHobby
      * classes, make sure to fully document so other students can use the same interface.
      */
     public void answerQuestion(){
-        String q=Greenfoot.ask("What would you like to know");
-        if (q.contains("hard")){
-            q=Greenfoot.ask("2D arrays, recursion, and merge sort... May I sit down?");
+        String q=Greenfoot.ask("What would you like to know?");
+        boolean check = true;
         
-        }
-        else {
-          q=Greenfoot.ask("I don't understand the question... May I sit down?"); 
-        }
-         if (q.equals("yes")){
+        while(check)
+        {
+            if (q.contains("summer")||q.contains("homework")){
+                q=Greenfoot.ask("2D Arrays,Linear Search,Selection Sort,Static vs Instance Variables and Binary Search...May I sit down? ");
+                if (q.contains("yes")||q.contains("YES")||q.contains("Yes")||q.contains("OK")||q.contains("ok")||q.contains("Ok")){
+                   check = false;
+                   sitDown();
+                   break;
+                   }
+                }
+                if (q.contains("2D arrays")){
+                 q=Greenfoot.ask("In a 2D array elements are arranged in rows and columns. Similar to an array a 2D array is collection of data of the same type, that can be given a name, it is accessed using indexes; its row and column index. Ex: x = a[row][col];.May I sit down??");
+                 if (q.contains("yes")||q.contains("YES")||q.contains("Yes")||q.contains("OK")||q.contains("ok")||q.contains("Ok")){
+                    check = false;
+                    sitDown();
+                    break;
+                    }
+                }
+                if (q.contains("linear search")){
+                   q=Greenfoot.ask("Linear Search is used to search for a key element an array, and returns its index position if it is found. If the element is not found, it will return -1.May I sit down??");
+                   if (q.contains("yes")||q.contains("YES")||q.contains("Yes")||q.contains("OK")||q.contains("ok")||q.contains("Ok")){
+                      check = false;
+                      sitDown();
+                      break;
+                   }
+                }
+                if (q.contains("selection sort")){
+                   q=Greenfoot.ask("Selection Sort, sorts an array by repeatedly finding the minimum element from the unsorted part and putting it in the beginning.May I sit down?");
+                   if (q.contains("yes")||q.contains("YES")||q.contains("Yes")||q.contains("OK")||q.contains("ok")||q.contains("Ok")){
+                      check = false;
+                      sitDown();
+                      break;
+                   }
+                }
+                if (q.contains("static vs instance variables")){
+                   q=Greenfoot.ask("Instance variables only scope within the curly braces defining a class.On the other hand static variables scope is the entire program. May I sit down?");
+                   if (q.contains("yes")||q.contains("YES")||q.contains("Yes")||q.contains("OK")||q.contains("ok")||q.contains("Ok")){
+                      check = false;
+                      sitDown();
+                      break;
+                   }
+                }
+                if (q.contains("binary search")){
+                   q=Greenfoot.ask("Binary search is done by searching a sorted array ,by searching the sort interval in half. Binary search is faster than linear search.May I sit down?");
+                   if (q.contains("yes")||q.contains("YES")||q.contains("Yes")||q.contains("OK")||q.contains("ok")||q.contains("Ok")){
+                      check = false;
+                      sitDown();
+                      break;
+                   }
+                }
+                
+                
+                if (q.contains("How many students are in the class?")){
+                   int number= getWorld().numberOfObjects();
+                   q=Greenfoot.ask("There are "+number+" students in the class ...May I sit down?");
+                   if (q.contains("yes")||q.contains("YES")||q.contains("Yes")){
+                      check = false;
+                      sitDown();
+                      break;
+                   }
+                }
+                
+            else{
+                q=Greenfoot.ask("Sorry, I did not understand the question......May I sit down?");
+                if (q.contains("yes")||q.contains("YES")||q.contains("Yes")){
+                    check = false;
+                    sitDown();
+                    break;
+                }
+                else{
+                   q=Greenfoot.ask("What would you like to know? ");
+                }
+                }
+            }
+            
             Greenfoot.delay(10);
-            sitDown();
         }
-        
-    }
+ 
+          
     /**
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You can write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
-        setLocation(0,0);
+         //setLocation(4,3);
          Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+         GreenfootImage image = getImage();
+         image.scale(300,300);
+         
+         int [][]img_loc = new int [5][7]; 
+         for(int row=0; row < img_loc.length ;row++){
+            for(int col=0; col < img_loc.length ;col++){
+                setLocation((int)(row * Math.random()*3), (int)(col * Math.random()*3));
+                turn(Greenfoot.getRandomNumber(45));
+                Greenfoot.delay(3);
+            }
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
+           image.scale(100,125);
            Greenfoot.delay(20);
+           setRotation(0);
            returnToSeat();
     }
      public void myHobby(String s) {
          System.out.println(s);
-}
+     }
 
 }
