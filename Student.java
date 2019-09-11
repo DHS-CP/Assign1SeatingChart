@@ -22,6 +22,7 @@ public abstract class Student extends Actor
    public String portraitFile; // image used when sitting
    public String standingFile; // image used when standing
    public String soundFile; //      firstName.toLowerCase()+lastName.toLowerCase()+".ext"; (.wav or .jpg)
+   //protected static int numstudent; 
    Classroom clas = (Classroom) getWorld();
    public void setRow(int r){
        myRow=r;
