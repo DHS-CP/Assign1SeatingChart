@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The KilgoreTrout class can be used as a model for your own class that represents you and your seating location in AP CSA
+ * The DonnaPrince classrepresents me and my seating location in AP CSA
  * 
- * @author Mr. Kaehms
- * @version 2.0 Aug 13, 2019
+ * @author Donna Prince
+ * @version 2.0 September 10, 2019
  */
 public class DonnaPrince extends Student implements SpecialInterestOrHobby
 {
@@ -142,6 +142,14 @@ public class DonnaPrince extends Student implements SpecialInterestOrHobby
                 if (q.contains("binary search")){
                    q=Greenfoot.ask("Binary search is done by searching a sorted array ,by searching the sort interval in half. Binary search is faster than linear search.May I sit down?");
                    if (q.contains("yes")||q.contains("YES")||q.contains("Yes")||q.contains("OK")||q.contains("ok")||q.contains("Ok")){
+                      check = false;
+                      sitDown();
+                      break;
+                   }
+                }
+             if (q.contains("hobby")){
+               q=Greenfoot.ask("My hobby is gardening .May I sit down?");
+               if (q.contains("yes")||q.contains("YES")||q.contains("Yes")||q.contains("OK")||q.contains("ok")||q.contains("Ok")){
                       check = false;
                       sitDown();
                       break;
